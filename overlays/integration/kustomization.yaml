@@ -3,3 +3,7 @@ kind: Kustomization
 resources:
   - github.com/goern/thoth-application?ref=master
   - github.com/goern/adviser-templates/overlays/integration?ref=integration
+patchesStrategicMerge:
+  - configmaps.yaml
+  - imagestreamtags.yaml
+  - init-job.yaml
