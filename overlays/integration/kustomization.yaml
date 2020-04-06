@@ -2,4 +2,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - github.com/goern/thoth-application?ref=master
-  - github.com/goern/adviser-templates?ref=integration
+  - github.com/goern/adviser-templates/overlays/integration?ref=integration
