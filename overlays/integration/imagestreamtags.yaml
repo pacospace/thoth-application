@@ -24,7 +24,7 @@ metadata:
   labels:
     app: thoth
     component: result-api
-  name: result-ap
+  name: result-api
 spec:
   lookupPolicy:
     local: true
