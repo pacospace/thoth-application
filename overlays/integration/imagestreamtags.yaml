@@ -21,7 +21,10 @@ spec:
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: result-api
+  labels:
+    app: thoth
+    component: result-api
+  name: result-ap
 spec:
   lookupPolicy:
     local: true
