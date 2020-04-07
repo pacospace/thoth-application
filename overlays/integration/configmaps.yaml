@@ -6,3 +6,8 @@ metadata:
 data:
   applicationVersion: 0.6.0-dev
   deploymentName: integration
+  infra-namespace: thoth-int
+  middletier-namespace: thoth-int
+  postgresql-host: postgresql
+  sentry-dsn: unset
+  storage-bucket-name: unset
