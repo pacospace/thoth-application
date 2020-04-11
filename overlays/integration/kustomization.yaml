@@ -6,3 +6,5 @@ patchesStrategicMerge:
   - configmaps.yaml
   - imagestreamtags.yaml
   - init-job.yaml
+generatorOptions:
+  disableNameSuffixHash: true

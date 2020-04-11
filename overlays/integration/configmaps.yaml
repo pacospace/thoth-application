@@ -5,9 +5,36 @@ metadata:
   name: thoth
 data:
   applicationVersion: 0.6.0-dev
-  deploymentName: integration
-  infra-namespace: thoth-int
+  deploymentName: goern-test
+  postgresql-host: postgresql.thoth-int.svc
+  storage-bucket-name: thoth-goern-tesn
+  amun-infra-namespace: thoth-int
+  amun-inspection-namespace: thoth-int
+  amun-namespace: thoth-int
+  backend-namespace: thoth-int
   middletier-namespace: thoth-int
-  postgresql-host: postgresql
-  sentry-dsn: unset
-  storage-bucket-name: unset
+  frontend-namespace: thoth-int
+  infra-namespace: thoth-int
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ceph
+data:
+  ceph-bucket-name: "thoth"
+  ceph-bucket-prefix: "data/thoth-int"
+  ceph-host: "https://s3.upshift.redhat.com/"
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: result-api
+data:
+  ceph-results-path: "/results"
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: kafka
+data:
+  kafka-bootstrap-servers: "thoth-kafka-bootstrap-thoth-int.apps.thoth01.lab.upshift.rdu2.redhat.com:443"
