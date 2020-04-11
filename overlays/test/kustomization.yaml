@@ -7,6 +7,5 @@ patchesStrategicMerge:
   - configmaps.yaml
   - imagestreamtags.yaml
   - init-job.yaml
-  - package-update-consumer.yaml
 generatorOptions:
   disableNameSuffixHash: true
