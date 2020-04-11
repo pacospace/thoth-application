@@ -19,9 +19,15 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: result-api
+  name: ceph
 data:
   ceph-bucket-name: "thoth"
   ceph-bucket-prefix: "data/thoth-goern-test"
   ceph-host: "https://s3.upshift.redhat.com/"
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: result-api
+data:
   ceph-results-path: "/results"
