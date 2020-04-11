@@ -37,4 +37,4 @@ apiVersion: v1
 metadata:
   name: kafka
 data:
-  kafka-bootstrap-servers: "kafka.test.thoth-station.ninja"
+  kafka-bootstrap-servers: "kafka.test.thoth-station.ninja:443"
