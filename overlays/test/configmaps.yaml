@@ -35,6 +35,6 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: result-api
+  name: kafka
 data:
   kafka-bootstrap-servers: "kafka.test.thoth-station.ninja"
