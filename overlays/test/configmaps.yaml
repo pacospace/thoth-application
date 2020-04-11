@@ -31,3 +31,10 @@ metadata:
   name: result-api
 data:
   ceph-results-path: "/results"
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: result-api
+data:
+  kafka-bootstrap-servers: "kafka.test.thoth-station.ninja"
