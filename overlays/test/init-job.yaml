@@ -14,6 +14,11 @@ spec:
               value: "1"
             - name: THOTH_CEPH_BUCKET_PREFIX
               value: "data/thoth-goern-test"
+            - name: THOTH_CEPH_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: ceph
+                  key: ceph-bucket-prefix
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
