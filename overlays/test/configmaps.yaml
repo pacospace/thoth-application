@@ -15,6 +15,10 @@ data:
   middletier-namespace: thoth-goern-test
   frontend-namespace: thoth-goern-test
   infra-namespace: thoth-goern-test
+  solvers: |
+    solver-rhel-8-py36
+    solver-fedora-31-py38
+    solver-fedora-31-py37
 ---
 kind: ConfigMap
 apiVersion: v1
