@@ -12,6 +12,8 @@ spec:
           env:
             - name: THOTH_USE_ARGO
               value: "1"
+            - name: THOTH_CEPH_BUCKET_PREFIX
+              value: "data/thoth-goern-test"
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
