@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - github.com/goern/thoth-application?ref=master
   - postgresql-ephemeral.yaml
+  - argo-namespace-install.yaml
 patchesStrategicMerge:
   - configmaps.yaml
   - imagestreamtags.yaml
