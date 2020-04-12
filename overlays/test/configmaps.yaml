@@ -28,6 +28,7 @@ data:
   ceph-bucket-name: "thoth"
   ceph-bucket-prefix: "data/thoth-goern-test"
   ceph-host: "https://s3.upshift.redhat.com/"
+  ceph-endpoint: "https://s3.upshift.redhat.com/"
 ---
 kind: ConfigMap
 apiVersion: v1

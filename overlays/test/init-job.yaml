@@ -19,7 +19,11 @@ spec:
                 configMapKeyRef:
                   name: ceph
                   key: ceph-bucket-prefix
-
+            - name: THOTH_S3_ENDPOINT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: ceph
+                  key: ceph-endpoint
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
