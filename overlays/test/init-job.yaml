@@ -15,4 +15,6 @@ kind: RoleBinding
 metadata:
   name: init-job
 subjects:
-  - namespace: thoth-goern-test
+  - kind: ServiceAccount
+    name: init-job
+    namespace: thoth-goern-test
