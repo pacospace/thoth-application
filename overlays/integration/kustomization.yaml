@@ -8,3 +8,5 @@ patchesStrategicMerge:
   - init-job.yaml
 generatorOptions:
   disableNameSuffixHash: true
+generators:
+  - ./secret-generator.yaml
