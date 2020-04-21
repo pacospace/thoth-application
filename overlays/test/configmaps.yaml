@@ -7,7 +7,7 @@ data:
   applicationVersion: 0.6.0-dev
   deploymentName: thoth-test
   postgresql-host: postgresql.thoth-test.svc
-  storage-bucket-name: thoth-goern-tesn
+  storage-bucket-name: thoth-test
   amun-infra-namespace: thoth-test
   amun-inspection-namespace: thoth-test
   amun-namespace: thoth-test
