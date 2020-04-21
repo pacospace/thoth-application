@@ -5,16 +5,16 @@ metadata:
   name: thoth
 data:
   applicationVersion: 0.6.0-dev
-  deploymentName: goern-test
-  postgresql-host: postgresql.thoth-goern-test.svc
+  deploymentName: thoth-test
+  postgresql-host: postgresql.thoth-test.svc
   storage-bucket-name: thoth-goern-tesn
-  amun-infra-namespace: thoth-goern-test
-  amun-inspection-namespace: thoth-goern-test
-  amun-namespace: thoth-goern-test
-  backend-namespace: thoth-goern-test
-  middletier-namespace: thoth-goern-test
-  frontend-namespace: thoth-goern-test
-  infra-namespace: thoth-goern-test
+  amun-infra-namespace: thoth-test
+  amun-inspection-namespace: thoth-test
+  amun-namespace: thoth-test
+  backend-namespace: thoth-test
+  middletier-namespace: thoth-test
+  frontend-namespace: thoth-test
+  infra-namespace: thoth-test
   solvers: |
     solver-rhel-8-py36
     solver-fedora-31-py38
@@ -26,7 +26,7 @@ metadata:
   name: ceph
 data:
   ceph-bucket-name: "thoth"
-  ceph-bucket-prefix: "data/thoth-goern-test"
+  ceph-bucket-prefix: "data/thoth-test"
   ceph-host: "https://s3.upshift.redhat.com/"
   ceph-endpoint: "https://s3.upshift.redhat.com/"
 ---
@@ -51,7 +51,7 @@ metadata:
 data:
   config: |
     containerRuntimeExecutor: "k8sapi"
-    namespace: "thoth-test-core"
+    namespace: "thoth-test"
     parallelism: 10
 
     # metricsConfig controls the path and port for prometheus metrics
@@ -65,7 +65,7 @@ data:
 
       s3:
         bucket: "DH-DEV-DATA"
-        keyPrefix: "data/thoth/thoth-test-core/argo/artifacts/"
+        keyPrefix: "data/thoth/thoth-test/argo/artifacts/"
         endpoint: "s3.upshift.redhat.com"
         insecure: true
         accessKeySecret:

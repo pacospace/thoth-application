@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: cronworkflows.argoproj.io
-  namespace: thoth-goern-test
+  namespace: thoth-test
 spec:
   group: argoproj.io
   names:
@@ -18,7 +18,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: workflows.argoproj.io
-  namespace: thoth-goern-test
+  namespace: thoth-test
 spec:
   additionalPrinterColumns:
     - JSONPath: .status.phase
@@ -43,7 +43,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: workflowtemplates.argoproj.io
-  namespace: thoth-goern-test
+  namespace: thoth-test
 spec:
   group: argoproj.io
   names:
@@ -68,7 +68,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: argo-role
-  namespace: thoth-goern-test
+  namespace: thoth-test
 rules:
   - apiGroups:
       - ""
@@ -164,7 +164,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: argo-server-role
-  namespace: thoth-goern-test
+  namespace: thoth-test
 rules:
   - apiGroups:
       - ""
@@ -223,7 +223,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: argo
-    namespace: thoth-goern-test
+    namespace: thoth-test
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -236,7 +236,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: argo-server
-    namespace: thoth-goern-test
+    namespace: thoth-test
 ---
 apiVersion: v1
 kind: ConfigMap
