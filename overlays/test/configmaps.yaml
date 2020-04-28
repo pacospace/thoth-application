@@ -5,16 +5,16 @@ metadata:
   name: thoth
 data:
   applicationVersion: 0.6.0-dev
-  deploymentName: thoth-test
-  postgresql-host: postgresql.thoth-test.svc
-  storage-bucket-name: thoth-test
-  amun-infra-namespace: thoth-test
-  amun-inspection-namespace: thoth-test
-  amun-namespace: thoth-test
-  backend-namespace: thoth-test
-  middletier-namespace: thoth-test
-  frontend-namespace: thoth-test
-  infra-namespace: thoth-test
+  deploymentName: thoth-test-core
+  postgresql-host: postgresql.thoth-test-core.svc
+  storage-bucket-name: thoth-test-core
+  amun-infra-namespace: thoth-test-core
+  amun-inspection-namespace: thoth-test-core
+  amun-namespace: thoth-test-core
+  backend-namespace: thoth-test-core
+  middletier-namespace: thoth-test-core
+  frontend-namespace: thoth-test-core
+  infra-namespace: thoth-test-core
   solvers: |
     solver-rhel-8-py36
     solver-fedora-31-py38
@@ -26,7 +26,7 @@ metadata:
   name: ceph
 data:
   ceph-bucket-name: "thoth"
-  ceph-bucket-prefix: "data/thoth-test"
+  ceph-bucket-prefix: "data/thoth-test-core"
   ceph-host: "https://s3.upshift.redhat.com/"
   ceph-endpoint: "https://s3.upshift.redhat.com/"
 ---
@@ -42,7 +42,7 @@ apiVersion: v1
 metadata:
   name: kafka
 data:
-  kafka-bootstrap-servers: "thoth-kafka-bootstrap-thoth-test.apps.thoth37.lab.pnq2.cee.redhat.com:443"
+  kafka-bootstrap-servers: "thoth-kafka-bootstrap-thoth-infra-stage.apps.thoth01.lab.upshift.rdu2.redhat.com:443"
 ---
 kind: ConfigMap
 apiVersion: v1
@@ -51,7 +51,7 @@ metadata:
 data:
   config: |
     containerRuntimeExecutor: "k8sapi"
-    namespace: "thoth-test"
+    namespace: "thoth-test-core"
     parallelism: 10
 
     # metricsConfig controls the path and port for prometheus metrics
@@ -65,7 +65,7 @@ data:
 
       s3:
         bucket: "DH-DEV-DATA"
-        keyPrefix: "data/thoth/thoth-test/argo/artifacts/"
+        keyPrefix: "data/thoth/thoth-test-core/argo/artifacts/"
         endpoint: "s3.upshift.redhat.com"
         insecure: true
         accessKeySecret:
