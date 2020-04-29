@@ -87,11 +87,3 @@ data:
   prometheus-instance-workflow-metrics-middletier: "workflow-controller-metrics-thoth-test-core.cloud.paas.psi.redhat.com:80"
   prometheus-pushgateway-host: pushgateway-dh-prod-monitoring.cloud.datahub.psi.redhat.com
   prometheus-pushgateway-port: "80"
----
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: metrics-exporter
-data:
-  max-workers: "8"
-  weak-readiness: "1"
