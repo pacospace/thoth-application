@@ -74,3 +74,16 @@ data:
         secretKeySecret:
           name: argo-artifact-repository-secrets
           key: secretKey
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: metrics-exporter
+data:
+  prometheus-host-url: "https://prometheus-dh-prod-monitoring.cloud.datahub.psi.redhat.com"
+  prometheus-instance-metrics-exporter-frontend: "metrics-exporter-thoth-test-core.cloud.paas.psi.redhat.com:80"
+  prometheus-instance-workflow-metrics-amun-inspection: "workflow-controller-metrics-thoth-test-core.cloud.paas.psi.redhat.com:80"
+  prometheus-instance-workflow-metrics-backend: "workflow-controller-metrics-thoth-test-core.cloud.paas.psi.redhat.com:80"
+  prometheus-instance-workflow-metrics-middletier: "workflow-controller-metrics-thoth-test-core.cloud.paas.psi.redhat.com:80"
+  prometheus-pushgateway-host: pushgateway-dh-prod-monitoring.cloud.datahub.psi.redhat.com
+  prometheus-pushgateway-port: "80"
