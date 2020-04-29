@@ -78,7 +78,7 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: metrics-exporter
+  name: prometheus
 data:
   prometheus-host-url: "https://prometheus-dh-prod-monitoring.cloud.datahub.psi.redhat.com"
   prometheus-instance-metrics-exporter-frontend: "metrics-exporter-thoth-test-core.cloud.paas.psi.redhat.com:80"
