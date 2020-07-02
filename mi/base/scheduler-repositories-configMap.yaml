@@ -15,16 +15,6 @@ metadata:
   labels:
     app: mi
 
-parameters:
-  - description: All of the repositories that are inspected by scheduled MI workflows
-    displayName: Repositories List
-    required: true
-    name: repositories
-    value: ""
-
-  - description: All of the organizations that are inspected by scheduled MI workflows
-    displayName: Organizations List
-    required: true
-    name: organizations
-    value: "thoth-station,AICoE"
-
+data:
+  repositories: ""
+  organizations: "thoth-station,AICoE"
