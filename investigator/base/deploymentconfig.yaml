@@ -101,6 +101,10 @@ spec:
               value: "0"
             - name: THOTH_INVESTIGATOR_SCHEDULE_REVSOLVER
               value: "0"
+            - name: ARGO_PENDING_SLEEP_TIME
+              value: '2'
+            - name: ARGO_PENDING_WORKFLOW_LIMIT
+              value: '200'
           volumeMounts:
             - name: secrets
               mountPath: /mnt/secrets
